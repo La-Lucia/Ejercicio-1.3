@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Personas.MainPage"
-             Title="Personas"
+             Title="Ejercicio 1.3"
              >
 
 <ContentPage.ToolbarItems>
@@ -14,9 +14,12 @@
     <ToolbarItem IconImageSource="plus.png" x:Name="BtnAgregar" Clicked="BtnAgregar_Clicked"/>
 
 </ContentPage.ToolbarItems>
+    
 
 <ContentPage.Content>
+    
     <StackLayout>
+        
 
             <CollectionView x:Name="listapersonas"
                             Margin="20"

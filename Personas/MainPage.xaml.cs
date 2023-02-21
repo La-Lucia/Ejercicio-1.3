@@ -46,12 +46,29 @@ namespace Personas
 
         private async void BtnModificar_Clicked(object sender, EventArgs e)
         {
+            
+            try
+            {
+                var eliminar = await App.DB.ActualizarPersona(PersonaSelec);
 
-            var pagina = new Views.PageModificar();
-            pagina.BindingContext = PersonaSelec;
-            await Navigation.PushAsync(pagina);
+                if (eliminar != 0)
+                {
+
+                    var pagina = new Views.PageModificar();
+                    pagina.BindingContext = PersonaSelec;
+                    listapersonas.SelectedItem = null ;
+                    await Navigation.PushAsync(pagina);
+                
+                }
+
+            }
+            catch
+            {
+                await DisplayAlert("Aviso", "Por favor seleccione un registro para actualizar", "Aceptar");
+            }
 
         }
+
 
         private async void BtnAgregar_Clicked(object sender, EventArgs e)
         {
