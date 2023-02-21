@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Personas.Views.PageModificar"
+             Title="Modificar Registro">
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="ID" FontSize="Default" Padding="15,20,0,0"/>
+            <Entry Text="{Binding Id}" x:Name="ID" Placeholder="Ingrese su nombre" Keyboard="Numeric"  Margin="10,5,5,5"  IsEnabled="False"/>
+
+            <Label Text="Nombre" FontSize="Default" Padding="15,5,0,0"/>
+            <Entry Text="{Binding Nombre}" x:Name="Nombre" Placeholder="Ingrese su nombre" Keyboard="Default"  Margin="10,5,5,5" />
+
+            <Label Text="Apellidos" FontSize="Default" Padding="15,5,0,0"/>
+            <Entry Text="{Binding Apellidos}" x:Name="Apellidos" Placeholder="Ingrese sus apellidos" Keyboard="Default" Margin="10,5,5,5"/>
+
+            <Label Text="Edad" FontSize="Default" Padding="15,5,0,0"/>
+            <Entry Text="{Binding Edad}" x:Name="Edad" Placeholder="Ingrese su edad" Keyboard="Numeric" Margin="10,5,5,5"/>
+
+            <Label Text="Correo" FontSize="Default" Padding="15,5,0,0"/>
+            <Entry Text="{Binding Correo}" x:Name="Correo" Placeholder="Ingrese su correo" Keyboard="Email" Margin="10,5,5,5"/>
+
+            <Label Text="Direccion" FontSize="Default" Padding="15,5,0,5"/>
+            <Entry Text="{Binding Direccion}" x:Name="Direccion" Placeholder="Ingrese su direccion" Keyboard="Default" Margin="10,5,5,10"/>
+
+            <Button Text="Modificar" x:Name="BtnGuardar" Clicked="BtnGuardar_Clicked"  BackgroundColor="#fac055" TextColor="White" Margin="10,5,10,5" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
